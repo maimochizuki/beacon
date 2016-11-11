@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         treasureButton.layer.cornerRadius = 10.0
         treasureButton.layer.masksToBounds = true
         
-        stampButton.backgroundColor = UIColor.orangeColor()
+        stampButton.backgroundColor = UIColor.blueColor()
         stampButton.layer.cornerRadius = 10.0
         stampButton.layer.masksToBounds = true
         
