@@ -28,9 +28,10 @@ class ViewController: UIViewController {
         treasureButton.layer.cornerRadius = 10.0
         treasureButton.layer.masksToBounds = true
         
-        stampButton.backgroundColor = UIColor.blueColor()
+        stampButton.backgroundColor = UIColor.orangeColor()
         stampButton.layer.cornerRadius = 10.0
         stampButton.layer.masksToBounds = true
+        stampButton.titleLabel!.font = UIFont(name: "Helvetica-Bold",size: CGFloat(30))
         
     }
 
