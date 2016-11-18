@@ -16,7 +16,7 @@
         
         func tableView(tableView: UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
             performSegueWithIdentifier("toDetail", sender: self)
-            ap.no = indexPath.row
+            ap.Item = items[indexPath.row]
         }
        
         @IBOutlet weak var tableView: UITableView!
@@ -28,13 +28,13 @@
         }
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: .Default, reuseIdentifier: "mycell")
-            if items[indexPath.row].preprocessing == "ok"{
+            if items[indexPath.row].checkOK != "ok"{
+                cell.selectionStyle = UITableViewCellSelectionStyle.None
+            }else{
+                cell.selectionStyle = UITableViewCellSelectionStyle.Blue
                 cell.textLabel?.text = items[indexPath.row].question
             }
             return cell
-            
-            
-            
         }
         
         
@@ -61,10 +61,7 @@
              Authorized      --  位置情報サービスへのアクセスを許可している
              */
             switch CLLocationManager.authorizationStatus() {
-            case .Authorized, .AuthorizedWhenInUse:
-                //iBeaconによる領域観測を開始する
-                print("観測開始")
-                self.manager.startRangingBeaconsInRegion(self.region)
+
             case .NotDetermined:
                 print("許可承認")
                 //デバイスに許可を促す
@@ -74,6 +71,10 @@
                 }else{
                     self.manager.startRangingBeaconsInRegion(self.region)
                 }
+            case .Authorized, .AuthorizedWhenInUse:
+                //iBeaconによる領域観測を開始する
+                print("観測開始")
+                self.manager.startRangingBeaconsInRegion(self.region)
             case .Restricted, .Denied:
                 //デバイスから拒否状態
                 print("Restricted")
@@ -170,23 +171,16 @@
         }
         
         func checkImmediate(beacons:[CLBeacon]){
+            self.tableView.reloadData()
             for i in 0..<beacons.count{
-                if  beacons[i].major == 1111 {
-                    if beacons[i].proximity == CLProximity.Immediate{
-                        items[0].preprocessing = "ok"
-                        self.tableView.reloadData()
-                    }
-                }
-                if beacons[i].major == 2222 {
-                    if beacons[i].proximity == CLProximity.Immediate{
-                        if items[0].preprocessing == "ok" {
-                            items[1].preprocessing = "ok"
-                            self.tableView.reloadData()
+                for j in 0..<items.count{
+                    if beacons[i].major == items[j].beacon {
+                        if beacons[i].proximity == CLProximity.Immediate{
+                            items[j].check(items)
                         }
                     }
                 }
             }
-            
         }
         
         func reset(){
@@ -194,20 +188,19 @@
         
         override func viewWillDisappear(animated: Bool) {
             
-            print("\(ap.no)")
-            
             
         }
-        
-        
+
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }
         
         func dataSet(){
-            items.append(Data(question: "ようこそ",preprocessing: "no"))
-            items.append(Data(question: "問1", preprocessing: "no"))
+            let no1:[String] = ["no"]
+            let no2:[String] = ["ようこそ"]
+            items.append(Data(question: "ようこそ",preprocessing: no1,beacon: 1111))
+            items.append(Data(question: "問1", preprocessing: no2,beacon: 2222))
         }
 
 }

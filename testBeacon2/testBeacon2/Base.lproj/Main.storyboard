@@ -46,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="339" y="247"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Title-->
         <scene sceneID="ifi-Ii-gXf">
             <objects>
                 <viewController id="qJk-p7-OfD" customClass="DetailViewController" customModule="testBeacon2" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,8 +59,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Pq9-ZU-wxz"/>
+                    <navigationItem key="navigationItem" title="Title" id="fhz-y1-g4w"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="navItem" destination="fhz-y1-g4w" id="isa-Oh-kJr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6k-m1-Dub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
