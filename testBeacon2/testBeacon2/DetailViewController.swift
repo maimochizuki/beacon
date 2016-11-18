@@ -19,7 +19,7 @@ class DetailViewController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
         
-        print("\(ap.no)")
+      //  print("\(ap.no)")
     }
     
     
@@ -88,7 +88,7 @@ class DetailViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        if(ap.no == 0){
+        if(ap.Item.question == "問1"){
         initImageView()
         }else{
         var toi = UILabel(frame : CGRectMake(100, 500, 500, 20))
@@ -98,6 +98,11 @@ class DetailViewController: UIViewController {
         
         let rightBtn = UIBarButtonItem(title: "解答",style: UIBarButtonItemStyle.Plain,target: self,action: "onAdd:")
         navItem.rightBarButtonItem = rightBtn
+        
+        
+      
+        navItem.title = "\(ap.Item.question)"
+        print("\(ap.Item.question)")
     }
 
     

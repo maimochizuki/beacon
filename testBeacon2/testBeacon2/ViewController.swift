@@ -16,7 +16,7 @@
         
         func tableView(tableView: UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
             performSegueWithIdentifier("toDetail", sender: self)
-            ap.no = indexPath.row
+            ap.Item = items[indexPath.row]
         }
        
         @IBOutlet weak var tableView: UITableView!
@@ -193,8 +193,6 @@
         }
         
         override func viewWillDisappear(animated: Bool) {
-            
-            print("\(ap.no)")
             
             
         }
