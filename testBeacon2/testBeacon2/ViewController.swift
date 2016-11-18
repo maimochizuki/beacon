@@ -61,10 +61,7 @@
              Authorized      --  位置情報サービスへのアクセスを許可している
              */
             switch CLLocationManager.authorizationStatus() {
-            case .Authorized, .AuthorizedWhenInUse:
-                //iBeaconによる領域観測を開始する
-                print("観測開始")
-                self.manager.startRangingBeaconsInRegion(self.region)
+
             case .NotDetermined:
                 print("許可承認")
                 //デバイスに許可を促す
@@ -74,6 +71,10 @@
                 }else{
                     self.manager.startRangingBeaconsInRegion(self.region)
                 }
+            case .Authorized, .AuthorizedWhenInUse:
+                //iBeaconによる領域観測を開始する
+                print("観測開始")
+                self.manager.startRangingBeaconsInRegion(self.region)
             case .Restricted, .Denied:
                 //デバイスから拒否状態
                 print("Restricted")

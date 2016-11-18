@@ -23,12 +23,14 @@ class DetailViewController: UIViewController {
         // UIImage インスタンスの生成
         let image1:UIImage = UIImage(named:"Goofy.jpg")!
         
+        
         // UIImageView 初期化
         let imageView = UIImageView(image:image1)
         
         // 画面の横幅を取得
         let screenWidth:CGFloat = view.frame.size.width
         let screenHeight:CGFloat = view.frame.size.height
+        
         
         // 画像の中心を画面の中心に設定
         imageView.center = CGPoint(x:screenWidth/2, y:screenHeight/2)
