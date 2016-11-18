@@ -28,13 +28,13 @@
         }
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: .Default, reuseIdentifier: "mycell")
-            if items[indexPath.row].preprocessing == "ok"{
+            if items[indexPath.row].checkOK != "ok"{
+                cell.selectionStyle = UITableViewCellSelectionStyle.None
+            }else{
+                cell.selectionStyle = UITableViewCellSelectionStyle.Blue
                 cell.textLabel?.text = items[indexPath.row].question
             }
             return cell
-            
-            
-            
         }
         
         
@@ -169,18 +169,19 @@
 
         }
         
+        
+        override func viewWillDisappear(animated: Bool) {
+            
+            print("\(ap.no)")
+            
+            
+        }
         func checkImmediate(beacons:[CLBeacon]){
             for i in 0..<beacons.count{
-                if  beacons[i].major == 1111 {
-                    if beacons[i].proximity == CLProximity.Immediate{
-                        items[0].preprocessing = "ok"
-                        self.tableView.reloadData()
-                    }
-                }
-                if beacons[i].major == 2222 {
-                    if beacons[i].proximity == CLProximity.Immediate{
-                        if items[0].preprocessing == "ok" {
-                            items[1].preprocessing = "ok"
+                for j in 0..<items.count{
+                    if beacons[i].major == items[j].beacon {
+                        if beacons[i].proximity == CLProximity.Immediate{
+                            items[j].check(items)
                             self.tableView.reloadData()
                         }
                     }
@@ -192,22 +193,16 @@
         func reset(){
         }
         
-        override func viewWillDisappear(animated: Bool) {
-            
-            print("\(ap.no)")
-            
-            
-        }
-        
-        
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }
         
         func dataSet(){
-            items.append(Data(question: "ようこそ",preprocessing: "no"))
-            items.append(Data(question: "問1", preprocessing: "no"))
+            let no1:[String] = ["no"]
+            let no2:[String] = ["ようこそ"]
+            items.append(Data(question: "ようこそ",preprocessing: no1,beacon: 1111))
+            items.append(Data(question: "問1", preprocessing: no2,beacon: 2222))
         }
 
 }
