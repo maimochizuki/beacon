@@ -5,7 +5,6 @@
 //  Created by ITユーザー on 2016/11/11.
 //  Copyright © 2016年 ITuser. All rights reserved.
 //
-
 import Foundation
 
 class Data {
@@ -14,31 +13,31 @@ class Data {
     var preprocessing:[String] = []
     var beacon = 0
     var checkOK = "no"
-    var ccnt = -1
+    var ccnt = -10
     
     init(question:String,preprocessing:[String], beacon:Int){
         self.question = question
         self.preprocessing = preprocessing
+        self.preprocessing.append("no")
         self.beacon = beacon
         ccnt = self.preprocessing.count
+        print("init=\(ccnt)")
     }
     
     func check(items:[Data]){
-        for i in 0..<items.count{
-            for j in 0..<preprocessing.count{
-                if items[i].preprocessing[0] == "no"{
-                    ccnt = 0
-                    break
-                }
-                else if items[i].question == preprocessing[j]{
-                    if items[i].checkOK == "ok"{
-                        ccnt -= 1
+        if preprocessing[0] == "no"{
+            checkOK = "ok"
+            
+            for i in items{
+                if i.question != question{
+                    for p in 0..<i.preprocessing.count{
+                        if i.preprocessing[p] == question{
+                            i.preprocessing.removeAtIndex(p)
+                            break
+                        }
                     }
                 }
             }
-        }
-        if ccnt == 0{
-            checkOK = "ok"
         }
     }
 }
