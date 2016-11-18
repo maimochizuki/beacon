@@ -11,6 +11,13 @@
     import CoreLocation
     
     class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
+        
+        let ap = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        func tableView(tableView: UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
+            performSegueWithIdentifier("toDetail", sender: self)
+            ap.no = indexPath.row
+        }
        
         @IBOutlet weak var tableView: UITableView!
         
@@ -25,6 +32,9 @@
                 cell.textLabel?.text = items[indexPath.row].question
             }
             return cell
+            
+            
+            
         }
         
         
@@ -181,6 +191,14 @@
         
         func reset(){
         }
+        
+        override func viewWillDisappear(animated: Bool) {
+            
+            print("\(ap.no)")
+            
+            
+        }
+        
         
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()

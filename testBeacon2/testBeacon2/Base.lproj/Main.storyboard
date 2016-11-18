@@ -39,7 +39,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="tableView" destination="nuB-h9-p00" id="GRK-Oj-mbI"/>
-                        <segue destination="qJk-p7-OfD" kind="push" id="0h5-lT-TAW"/>
+                        <segue destination="qJk-p7-OfD" kind="push" identifier="toDetail" id="0h5-lT-TAW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
