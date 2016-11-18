@@ -16,7 +16,7 @@
         
         func tableView(tableView: UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath){
             performSegueWithIdentifier("toDetail", sender: self)
-            ap.no = indexPath.row
+            ap.Item = items[indexPath.row]
         }
        
         @IBOutlet weak var tableView: UITableView!
@@ -170,30 +170,27 @@
 
         }
         
-        
-        override func viewWillDisappear(animated: Bool) {
-            
-            print("\(ap.no)")
-            
-            
-        }
         func checkImmediate(beacons:[CLBeacon]){
+            self.tableView.reloadData()
             for i in 0..<beacons.count{
                 for j in 0..<items.count{
                     if beacons[i].major == items[j].beacon {
                         if beacons[i].proximity == CLProximity.Immediate{
                             items[j].check(items)
-                            self.tableView.reloadData()
                         }
                     }
                 }
             }
-            
         }
         
         func reset(){
         }
         
+        override func viewWillDisappear(animated: Bool) {
+            
+            
+        }
+
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
