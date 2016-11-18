@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		71126B3E1DDE86750018BDCD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71126B3D1DDE86750018BDCD /* DetailViewController.swift */; };
-
 		71126B401DDEA1A10018BDCD /* Goofy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71126B3F1DDEA1A10018BDCD /* Goofy.jpg */; };
 		71CB304C1DD580FE00FEFC0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB304B1DD580FE00FEFC0E /* AppDelegate.swift */; };
 		71CB304E1DD580FE00FEFC0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB304D1DD580FE00FEFC0E /* ViewController.swift */; };
@@ -41,7 +40,6 @@
 /* Begin PBXFileReference section */
 		71126B3D1DDE86750018BDCD /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		71126B3F1DDEA1A10018BDCD /* Goofy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Goofy.jpg; sourceTree = SOURCE_ROOT; };
-
 		71CB30481DD580FE00FEFC0E /* testBeacon2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testBeacon2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CB304B1DD580FE00FEFC0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71CB304D1DD580FE00FEFC0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 				71CB304F1DD580FE00FEFC0E /* Main.storyboard */,
 				71126B3D1DDE86750018BDCD /* DetailViewController.swift */,
 				71CB307B1DD58F0800FEFC0E /* Data.swift */,
-				713C8A551DDE9B45001C6C5E /* Goofy.jpg */,
 				71CB30521DD580FE00FEFC0E /* Assets.xcassets */,
 				71CB30571DD580FE00FEFC0E /* Info.plist */,
 				71CB30541DD580FE00FEFC0E /* LaunchScreen.storyboard */,
@@ -209,7 +206,7 @@
 				TargetAttributes = {
 					71CB30471DD580FE00FEFC0E = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = WL47M7W2DS;
+						DevelopmentTeam = WJQR5TZW4D;
 					};
 					71CB305B1DD580FE00FEFC0E = {
 						CreatedOnToolsVersion = 7.3;
@@ -249,7 +246,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				71126B401DDEA1A10018BDCD /* Goofy.jpg in Resources */,
-
 				71CB30561DD580FE00FEFC0E /* LaunchScreen.storyboard in Resources */,
 				71CB30531DD580FE00FEFC0E /* Assets.xcassets in Resources */,
 				71CB30511DD580FE00FEFC0E /* Main.storyboard in Resources */,
@@ -429,7 +425,7 @@
 				INFOPLIST_FILE = testBeacon2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = neec.testBeacon2.1;
+				PRODUCT_BUNDLE_IDENTIFIER = neec.testBeacon2.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -444,7 +440,7 @@
 				INFOPLIST_FILE = testBeacon2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = neec.testBeacon2.1;
+				PRODUCT_BUNDLE_IDENTIFIER = neec.testBeacon2.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
