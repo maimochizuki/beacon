@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		71126B3E1DDE86750018BDCD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71126B3D1DDE86750018BDCD /* DetailViewController.swift */; };
+		71126B401DDEA1A10018BDCD /* Goofy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71126B3F1DDEA1A10018BDCD /* Goofy.jpg */; };
 		71CB304C1DD580FE00FEFC0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB304B1DD580FE00FEFC0E /* AppDelegate.swift */; };
 		71CB304E1DD580FE00FEFC0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB304D1DD580FE00FEFC0E /* ViewController.swift */; };
 		71CB30511DD580FE00FEFC0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71CB304F1DD580FE00FEFC0E /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		71126B3D1DDE86750018BDCD /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		71126B3F1DDEA1A10018BDCD /* Goofy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Goofy.jpg; sourceTree = SOURCE_ROOT; };
 		71CB30481DD580FE00FEFC0E /* testBeacon2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testBeacon2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CB304B1DD580FE00FEFC0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71CB304D1DD580FE00FEFC0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		71CB304A1DD580FE00FEFC0E /* testBeacon2 */ = {
 			isa = PBXGroup;
 			children = (
+				71126B3F1DDEA1A10018BDCD /* Goofy.jpg */,
 				71CB304B1DD580FE00FEFC0E /* AppDelegate.swift */,
 				71CB304D1DD580FE00FEFC0E /* ViewController.swift */,
 				71CB304F1DD580FE00FEFC0E /* Main.storyboard */,
@@ -242,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71126B401DDEA1A10018BDCD /* Goofy.jpg in Resources */,
 				71CB30561DD580FE00FEFC0E /* LaunchScreen.storyboard in Resources */,
 				71CB30531DD580FE00FEFC0E /* Assets.xcassets in Resources */,
 				71CB30511DD580FE00FEFC0E /* Main.storyboard in Resources */,
