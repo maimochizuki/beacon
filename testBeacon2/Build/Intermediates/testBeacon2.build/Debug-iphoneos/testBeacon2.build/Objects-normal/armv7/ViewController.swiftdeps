@@ -6,62 +6,62 @@ provides-nominal:
 provides-member:
 - ["C11testBeacon214ViewController", ""]
 provides-dynamic-lookup:
-- "checkImmediate"
-- "region"
-- "locationManager"
-- "locationManager"
-- "locationManager"
-- "locationManager"
-- "locationManager"
-- "locationManager"
-- "locationManager"
-- "ap"
-- "viewDidLoad"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "viewWillDisappear"
 - "proximityUUID"
-- "didReceiveMemoryWarning"
-- "reset"
-- "dataSet"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
 - "manager"
+- "dataSet"
+- "didReceiveMemoryWarning"
+- "viewWillDisappear"
+- "ap"
+- "checkImmediate"
+- "locationManager"
+- "locationManager"
+- "locationManager"
+- "locationManager"
+- "locationManager"
+- "locationManager"
+- "locationManager"
+- "viewDidLoad"
+- "reset"
+- "region"
 depends-top-level:
-- "CLBeaconRegion"
-- "UITableView"
-- !private "NSString"
-- "UIViewController"
-- !private "String"
-- "NSIndexPath"
-- "CLLocationManagerDelegate"
-- "StringLiteralType"
-- "Bool"
-- "UITableViewDataSource"
-- "NSError"
-- "ViewController"
-- "UITableViewDelegate"
-- !private ">="
-- !private "~="
-- !private "=="
-- !private "UIDevice"
-- !private "CLProximity"
-- "Int"
-- !private "UITableViewCellSelectionStyle"
-- "NSUUID"
-- "UIApplication"
-- !private "!="
+- !private "print"
 - "CLRegion"
 - "UITableViewCell"
 - !private "..<"
-- !private "print"
-- !private "q_and_a"
-- "CLBeacon"
-- "CLLocationManager"
+- !private "=="
+- "Int"
 - "AppDelegate"
-- "Data"
+- !private "~="
+- !private "String"
+- "NSUUID"
+- "ViewController"
+- "CLBeacon"
+- !private ">="
 - "CLRegionState"
+- !private "CLProximity"
+- "UITableView"
+- !private "!="
+- "CLLocationManager"
+- "NSIndexPath"
+- "UIApplication"
+- !private "UITableViewCellSelectionStyle"
+- "NSError"
+- "StringLiteralType"
+- "Data"
+- !private "NSString"
+- "Bool"
+- "CLBeaconRegion"
+- "UITableViewDelegate"
+- !private "q_and_a"
+- "UITableViewDataSource"
+- !private "UIDevice"
+- "CLLocationManagerDelegate"
+- "UIViewController"
 depends-member:
 - ["Ps9AnyObject", "CLBeaconRegion"]
 - ["Ps9AnyObject", "CLLocationManager"]
@@ -75,10 +75,8 @@ depends-member:
 - !private ["Ps9AnyObject", "UITableViewCellSelectionStyle"]
 - ["Ps9AnyObject", "ap"]
 - !private ["Ps9AnyObject", "authorizationStatus"]
-- !private ["Ps9AnyObject", "beacon"]
 - !private ["Ps9AnyObject", "check"]
 - ["Ps9AnyObject", "checkImmediate"]
-- !private ["Ps9AnyObject", "checkOK"]
 - !private ["Ps9AnyObject", "currentDevice"]
 - ["Ps9AnyObject", "dataSet"]
 - ["Ps9AnyObject", "delegate"]
@@ -96,6 +94,7 @@ depends-member:
 - ["Ps9AnyObject", "numberOfSectionsInTableView"]
 - !private ["Ps9AnyObject", "performSegueWithIdentifier"]
 - !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "printOK"]
 - !private ["Ps9AnyObject", "proximity"]
 - ["Ps9AnyObject", "proximityUUID"]
 - !private ["Ps9AnyObject", "q_and_a"]
@@ -151,11 +150,9 @@ depends-member:
 - !private ["Vs10ArraySlice", "Index"]
 - !private ["Ps22BidirectionalIndexType", "Distance"]
 - !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
-- !private ["Ps22BidirectionalIndexType", "Stride"]
 - !private ["Ps22BidirectionalIndexType", "_DisabledRangeIndex"]
 - !private ["Ps21BitwiseOperationsType", "Distance"]
 - !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
-- !private ["Ps21BitwiseOperationsType", "Stride"]
 - !private ["Ps21BitwiseOperationsType", "_DisabledRangeIndex"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Sb", "deinit"]
@@ -234,7 +231,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "Item"]
 - ["Ps11CVarArgType", "NSUUID"]
-- !private ["Ps11CVarArgType", "Stride"]
 - ["Ps11CVarArgType", "UIApplication"]
 - !private ["Ps11CVarArgType", "UIDevice"]
 - !private ["Ps11CVarArgType", "UITableViewCell"]
@@ -304,7 +300,6 @@ depends-member:
 - !private ["Ps14CollectionType", "subscript"]
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
-- !private ["Ps10Comparable", "Stride"]
 - !private ["Ps10Comparable", "_DisabledRangeIndex"]
 - !private ["Ps10Comparable", "init"]
 - ["Ps28CustomDebugStringConvertible", "CLBeaconRegion"]
@@ -388,7 +383,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "Item"]
 - ["Ps23CustomStringConvertible", "NSUUID"]
-- !private ["Ps23CustomStringConvertible", "Stride"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - ["Ps23CustomStringConvertible", "UIApplication"]
 - !private ["Ps23CustomStringConvertible", "UIDevice"]
@@ -454,11 +448,10 @@ depends-member:
 - ["Ps23CustomStringConvertible", "viewForZoomingInScrollView"]
 - ["Ps23CustomStringConvertible", "viewWillDisappear"]
 - ["Ps23CustomStringConvertible", ""]
-- !private ["C11testBeacon24Data", "beacon"]
 - !private ["C11testBeacon24Data", "check"]
-- !private ["C11testBeacon24Data", "checkOK"]
 - ["C11testBeacon24Data", "deinit"]
 - !private ["C11testBeacon24Data", "init"]
+- !private ["C11testBeacon24Data", "printOK"]
 - !private ["C11testBeacon24Data", "title"]
 - !private ["Sd", "deinit"]
 - ["Ps9Equatable", "Authorized"]
@@ -481,7 +474,6 @@ depends-member:
 - ["Ps9Equatable", "NotDetermined"]
 - !private ["Ps9Equatable", "RawValue"]
 - ["Ps9Equatable", "Restricted"]
-- !private ["Ps9Equatable", "Stride"]
 - ["Ps9Equatable", "UIApplication"]
 - !private ["Ps9Equatable", "UIDevice"]
 - !private ["Ps9Equatable", "UITableViewCell"]
@@ -547,7 +539,6 @@ depends-member:
 - !private ["Sf", "deinit"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
-- !private ["Ps16ForwardIndexType", "Stride"]
 - !private ["Ps16ForwardIndexType", "_DisabledRangeIndex"]
 - !private ["Ps13GeneratorType", "Element"]
 - !private ["Vs16HalfOpenInterval", "Generator"]
@@ -571,7 +562,6 @@ depends-member:
 - ["Ps8Hashable", "NotDetermined"]
 - !private ["Ps8Hashable", "RawValue"]
 - ["Ps8Hashable", "Restricted"]
-- !private ["Ps8Hashable", "Stride"]
 - ["Ps8Hashable", "UIApplication"]
 - !private ["Ps8Hashable", "UIDevice"]
 - !private ["Ps8Hashable", "UITableViewCell"]
@@ -642,7 +632,6 @@ depends-member:
 - !private ["Vs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
-- !private ["Si", "Stride"]
 - !private ["Si", "_DisabledRangeIndex"]
 - !private ["Si", "deinit"]
 - !private ["Vs5Int16", "deinit"]
@@ -651,20 +640,16 @@ depends-member:
 - !private ["Vs4Int8", "deinit"]
 - !private ["Ps21IntegerArithmeticType", "Distance"]
 - !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
-- !private ["Ps21IntegerArithmeticType", "Stride"]
 - !private ["Ps21IntegerArithmeticType", "_DisabledRangeIndex"]
 - !private ["Ps25IntegerLiteralConvertible", "Distance"]
 - !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
-- !private ["Ps25IntegerLiteralConvertible", "Stride"]
 - !private ["Ps25IntegerLiteralConvertible", "_DisabledRangeIndex"]
 - !private ["Ps11IntegerType", "Distance"]
 - !private ["Ps11IntegerType", "IntegerLiteralType"]
-- !private ["Ps11IntegerType", "Stride"]
 - !private ["Ps11IntegerType", "_DisabledRangeIndex"]
 - !private ["Ps12IntervalType", "Generator"]
 - !private ["Ps14MirrorPathType", "Distance"]
 - !private ["Ps14MirrorPathType", "IntegerLiteralType"]
-- !private ["Ps14MirrorPathType", "Stride"]
 - !private ["Ps14MirrorPathType", "_DisabledRangeIndex"]
 - !private ["Ps14MirrorPathType", "init"]
 - !private ["Ps21MutableCollectionType", "Generator"]
@@ -796,7 +781,6 @@ depends-member:
 - !private ["CSo11NSIndexPath", "row"]
 - !private ["PSo16NSMutableCopying", "floatValue"]
 - !private ["PSo16NSMutableCopying", "init"]
-- !private ["CSo8NSNumber", "deinit"]
 - ["CSo8NSObject", "AppDelegate"]
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "CLBeacon"]
@@ -945,12 +929,10 @@ depends-member:
 - !private ["CSo8NSString", "floatValue"]
 - !private ["CSo8NSString", "init"]
 - ["CSo6NSUUID", "init"]
-- !private ["CSo7NSValue", "deinit"]
 - ["Sq", "deinit"]
 - !private ["Ps16OutputStreamType", "init"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
-- !private ["Ps21RandomAccessIndexType", "Stride"]
 - !private ["Ps21RandomAccessIndexType", "_DisabledRangeIndex"]
 - !private ["Vs5Range", "Generator"]
 - !private ["Vs5Range", "deinit"]
@@ -983,11 +965,9 @@ depends-member:
 - !private ["Ps12SequenceType", "subscript"]
 - !private ["Ps17SignedIntegerType", "Distance"]
 - !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
-- !private ["Ps17SignedIntegerType", "Stride"]
 - !private ["Ps17SignedIntegerType", "_DisabledRangeIndex"]
 - !private ["Ps16SignedNumberType", "Distance"]
 - !private ["Ps16SignedNumberType", "IntegerLiteralType"]
-- !private ["Ps16SignedNumberType", "Stride"]
 - !private ["Ps16SignedNumberType", "_DisabledRangeIndex"]
 - !private ["Vs5Slice", "Generator"]
 - !private ["Vs5Slice", "Index"]
@@ -996,7 +976,6 @@ depends-member:
 - !private ["Ps10Streamable", "init"]
 - !private ["Ps10Strideable", "Distance"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
-- !private ["Ps10Strideable", "Stride"]
 - !private ["Ps10Strideable", "_DisabledRangeIndex"]
 - !private ["SS", "deinit"]
 - !private ["SS", "init"]
@@ -1609,7 +1588,6 @@ depends-member:
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
-- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Stride"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisabledRangeIndex"]
 - !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
 - !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
@@ -1623,21 +1601,17 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps14_Incrementable", "Distance"]
 - !private ["Ps14_Incrementable", "IntegerLiteralType"]
-- !private ["Ps14_Incrementable", "Stride"]
 - !private ["Ps14_Incrementable", "_DisabledRangeIndex"]
 - !private ["Ps22_IntegerArithmeticType", "Distance"]
 - !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
-- !private ["Ps22_IntegerArithmeticType", "Stride"]
 - !private ["Ps22_IntegerArithmeticType", "_DisabledRangeIndex"]
 - !private ["Ps12_IntegerType", "Distance"]
 - !private ["Ps12_IntegerType", "IntegerLiteralType"]
-- !private ["Ps12_IntegerType", "Stride"]
 - !private ["Ps12_IntegerType", "_DisabledRangeIndex"]
 - !private ["Ps21_ObjectiveCBridgeable", "Distance"]
 - !private ["Ps21_ObjectiveCBridgeable", "Generator"]
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
-- !private ["Ps21_ObjectiveCBridgeable", "Stride"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
 - !private ["Ps21_ObjectiveCBridgeable", "_DisabledRangeIndex"]
 - !private ["Ps21_ObjectiveCBridgeable", "_Element"]
@@ -1649,13 +1623,11 @@ depends-member:
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
 - !private ["Ps22_RandomAccessAmbiguity", "Distance"]
 - !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
-- !private ["Ps22_RandomAccessAmbiguity", "Stride"]
 - !private ["Ps22_RandomAccessAmbiguity", "_DisabledRangeIndex"]
 - !private ["Ps12_Reflectable", "Distance"]
 - !private ["Ps12_Reflectable", "Generator"]
 - !private ["Ps12_Reflectable", "Index"]
 - !private ["Ps12_Reflectable", "IntegerLiteralType"]
-- !private ["Ps12_Reflectable", "Stride"]
 - !private ["Ps12_Reflectable", "SubSequence"]
 - !private ["Ps12_Reflectable", "_DisabledRangeIndex"]
 - !private ["Ps12_Reflectable", "_Element"]
@@ -1671,7 +1643,6 @@ depends-member:
 - !private ["Ps12_Reflectable", "textLabel"]
 - !private ["Ps18_SignedIntegerType", "Distance"]
 - !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
-- !private ["Ps18_SignedIntegerType", "Stride"]
 - !private ["Ps18_SignedIntegerType", "_DisabledRangeIndex"]
 - !private ["C11testBeacon27q_and_a", "init"]
 depends-nominal:
@@ -1728,13 +1699,11 @@ depends-nominal:
 - "PSo26NSExtensionRequestHandling"
 - !private "CSo11NSIndexPath"
 - !private "PSo16NSMutableCopying"
-- !private "CSo8NSNumber"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - "PSo14NSSecureCoding"
 - !private "CSo8NSString"
 - "CSo6NSUUID"
-- !private "CSo7NSValue"
 - "Sq"
 - !private "Ps16OutputStreamType"
 - !private "Ps21RandomAccessIndexType"

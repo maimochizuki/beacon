@@ -12,31 +12,40 @@ class Data {
     var question:q_and_a!
     var preprocessing:[String] = []
     var beacon = 0
-    var checkOK = "no"
+    var printOK = "ng"
     
     init(title:String, question:q_and_a, preprocessing:[String], beacon:Int){
         self.title = title
         self.question = question
         self.preprocessing = preprocessing
-        self.preprocessing.append("no")
+        self.preprocessing.append("end")
         self.beacon = beacon
+        if question.doAnswer == "ok"{
+            printOK = "ok"
+        }
     }
 
     
-    func check(items:[Data]){
-        if preprocessing[0] == "no"{
-            if question.doAnswer == "no" || question.doAnswer == "ok"{
-                checkOK = "ok"
-                for i in items{
-                    if i.title != title{
-                        for p in 0..<i.preprocessing.count{
-                            if i.preprocessing[p] == title{
-                                i.preprocessing.removeAtIndex(p)
-                                break
+    func check(items:[Data], major:NSNumber){
+        print(major)
+        if question.doAnswer == "ok"{
+            for i in items{
+                if i.title != title{
+                    for p in 0..<i.preprocessing.count{
+                        if i.preprocessing[p] == title{
+                            i.preprocessing.removeAtIndex(p)
+                            if i.preprocessing[0] == "end"{
+                                i.printOK = "o"
                             }
+                            break
                         }
                     }
                 }
+            }
+        }
+        if printOK == "o"{
+            if major == beacon{
+                printOK = "ok"
             }
         }
     }
@@ -54,7 +63,7 @@ class q_and_a {
         self.answer = answer
         switch qType {
         case 0:
-            doAnswer = "no"
+            doAnswer = "ok"
         default:
             doAnswer = "yes"
         }

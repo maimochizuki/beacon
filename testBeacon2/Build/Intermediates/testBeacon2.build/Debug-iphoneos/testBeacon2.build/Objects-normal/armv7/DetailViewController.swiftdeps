@@ -6,47 +6,47 @@ provides-nominal:
 provides-member:
 - ["C11testBeacon220DetailViewController", ""]
 provides-dynamic-lookup:
+- "scale"
+- "navItem"
+- "BoundSize_h"
+- "viewDidLoad"
+- "didReceiveMemoryWarning"
 - "width"
 - "BoundSize_w"
-- "viewDidLoad"
+- "onAdd"
 - "viewWillAppear"
 - "height"
-- "didReceiveMemoryWarning"
-- "scale"
-- "BoundSize_h"
 - "ap"
-- "onAdd"
-- "navItem"
 depends-top-level:
-- !private "*"
-- !private "CGPoint"
-- "UIApplication"
-- "Bool"
 - !private "UIImage"
-- "UINavigationItem"
-- !private "BooleanLiteralType"
 - "AnyObject"
-- "AppDelegate"
-- !private "NSLineBreakMode"
-- "UIScreen"
-- !private "UIAlertController"
-- !private "CGRectMake"
-- !private "print"
-- !private "UIImageView"
-- !private "UITextField"
-- "UIViewController"
-- !private "UILabel"
-- !private "StringLiteralType"
-- !private "-"
 - !private "CGRect"
-- !private "UIAlertAction"
-- !private "UIBarButtonItem"
-- !private "UIBarButtonItemStyle"
 - "DetailViewController"
+- !private "StringLiteralType"
 - !private "UnicodeScalarType"
-- !private "/"
-- !private "=="
 - "CGFloat"
+- "UIApplication"
+- !private "/"
+- "UINavigationItem"
+- !private "UIAlertAction"
+- !private "NSLineBreakMode"
+- "AppDelegate"
+- !private "=="
+- !private "CGRectMake"
+- !private "-"
+- !private "CGPoint"
+- !private "UIImageView"
+- !private "BooleanLiteralType"
+- "UIViewController"
+- !private "UIBarButtonItem"
+- !private "UILabel"
+- "UIScreen"
+- !private "print"
+- !private "UIBarButtonItemStyle"
+- !private "*"
+- !private "UITextField"
+- !private "UIAlertController"
+- "Bool"
 depends-member:
 - ["Ps9AnyObject", "BoundSize_h"]
 - ["Ps9AnyObject", "BoundSize_w"]
@@ -67,11 +67,13 @@ depends-member:
 - !private ["Ps9AnyObject", "addAction"]
 - !private ["Ps9AnyObject", "addSubview"]
 - !private ["Ps9AnyObject", "addTextFieldWithConfigurationHandler"]
+- !private ["Ps9AnyObject", "answer"]
 - ["Ps9AnyObject", "ap"]
 - ["Ps9AnyObject", "bounds"]
 - !private ["Ps9AnyObject", "center"]
 - ["Ps9AnyObject", "delegate"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- !private ["Ps9AnyObject", "doAnswer"]
 - !private ["Ps9AnyObject", "frame"]
 - ["Ps9AnyObject", "height"]
 - ["Ps9AnyObject", "init"]
@@ -91,6 +93,7 @@ depends-member:
 - !private ["Ps9AnyObject", "size"]
 - !private ["Ps9AnyObject", "sizeToFit"]
 - !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "textFields"]
 - !private ["Ps9AnyObject", "title"]
 - !private ["Ps9AnyObject", "view"]
 - ["Ps9AnyObject", "viewDidLoad"]
@@ -98,6 +101,11 @@ depends-member:
 - ["Ps9AnyObject", "width"]
 - ["Ps9AnyObject", ""]
 - !private ["C11testBeacon211AppDelegate", "Item"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "deinit"]
+- !private ["Sa", "subscript"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "subscript"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Sb", "deinit"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
@@ -151,6 +159,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "size"]
 - !private ["Ps11CVarArgType", "sizeToFit"]
 - !private ["Ps11CVarArgType", "text"]
+- !private ["Ps11CVarArgType", "textFields"]
 - !private ["Ps11CVarArgType", "title"]
 - !private ["Ps11CVarArgType", "view"]
 - ["Ps11CVarArgType", "viewDidLoad"]
@@ -158,12 +167,18 @@ depends-member:
 - ["Ps11CVarArgType", "width"]
 - ["Ps11CVarArgType", ""]
 - !private ["Vs9Character", "deinit"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "subscript"]
 - !private ["Ps10Comparable", "init"]
 - ["Ps28CustomDebugStringConvertible", "BoundSize_h"]
 - ["Ps28CustomDebugStringConvertible", "BoundSize_w"]
 - !private ["Ps28CustomDebugStringConvertible", "CGPoint"]
 - !private ["Ps28CustomDebugStringConvertible", "CGRect"]
 - !private ["Ps28CustomDebugStringConvertible", "CGRectMake"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "Item"]
 - !private ["Ps28CustomDebugStringConvertible", "NSLineBreakMode"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertAction"]
@@ -199,7 +214,9 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "sharedApplication"]
 - !private ["Ps28CustomDebugStringConvertible", "size"]
 - !private ["Ps28CustomDebugStringConvertible", "sizeToFit"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "textFields"]
 - !private ["Ps28CustomDebugStringConvertible", "title"]
 - !private ["Ps28CustomDebugStringConvertible", "view"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
@@ -211,6 +228,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CGPoint"]
 - !private ["Ps23CustomStringConvertible", "CGRect"]
 - !private ["Ps23CustomStringConvertible", "CGRectMake"]
+- !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "Item"]
 - !private ["Ps23CustomStringConvertible", "NSLineBreakMode"]
 - !private ["Ps23CustomStringConvertible", "UIAlertAction"]
@@ -247,7 +265,9 @@ depends-member:
 - ["Ps23CustomStringConvertible", "sharedApplication"]
 - !private ["Ps23CustomStringConvertible", "size"]
 - !private ["Ps23CustomStringConvertible", "sizeToFit"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
 - !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "textFields"]
 - !private ["Ps23CustomStringConvertible", "title"]
 - !private ["Ps23CustomStringConvertible", "view"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
@@ -340,6 +360,7 @@ depends-member:
 - !private ["Ps9Equatable", "size"]
 - !private ["Ps9Equatable", "sizeToFit"]
 - !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "textFields"]
 - !private ["Ps9Equatable", "title"]
 - !private ["Ps9Equatable", "view"]
 - ["Ps9Equatable", "viewDidLoad"]
@@ -348,6 +369,7 @@ depends-member:
 - ["Ps9Equatable", ""]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Sf", "deinit"]
+- !private ["Ps13GeneratorType", "Element"]
 - !private ["Ps8Hashable", "Alert"]
 - ["Ps8Hashable", "BoundSize_h"]
 - ["Ps8Hashable", "BoundSize_w"]
@@ -395,18 +417,32 @@ depends-member:
 - !private ["Ps8Hashable", "size"]
 - !private ["Ps8Hashable", "sizeToFit"]
 - !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "textFields"]
 - !private ["Ps8Hashable", "title"]
 - !private ["Ps8Hashable", "view"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", "viewWillAppear"]
 - ["Ps8Hashable", "width"]
 - ["Ps8Hashable", ""]
+- !private ["SQ", "deinit"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
 - !private ["Si", "deinit"]
 - !private ["Vs5Int16", "deinit"]
 - !private ["Vs5Int32", "deinit"]
 - !private ["Vs5Int64", "deinit"]
 - !private ["Vs4Int8", "deinit"]
 - !private ["Ps14MirrorPathType", "init"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "subscript"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "subscript"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "subscript"]
 - ["PSo8NSCoding", "BoundSize_h"]
 - ["PSo8NSCoding", "BoundSize_w"]
 - !private ["PSo8NSCoding", "CGPoint"]
@@ -443,6 +479,7 @@ depends-member:
 - !private ["PSo8NSCoding", "size"]
 - !private ["PSo8NSCoding", "sizeToFit"]
 - !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "textFields"]
 - !private ["PSo8NSCoding", "title"]
 - !private ["PSo8NSCoding", "view"]
 - ["PSo8NSCoding", "viewDidLoad"]
@@ -477,6 +514,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "presentViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "scale"]
+- !private ["PSo26NSExtensionRequestHandling", "textFields"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
@@ -531,6 +569,7 @@ depends-member:
 - !private ["CSo8NSObject", "size"]
 - !private ["CSo8NSObject", "sizeToFit"]
 - !private ["CSo8NSObject", "text"]
+- !private ["CSo8NSObject", "textFields"]
 - !private ["CSo8NSObject", "title"]
 - !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidLoad"]
@@ -577,6 +616,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "size"]
 - !private ["PSo16NSObjectProtocol", "sizeToFit"]
 - !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "textFields"]
 - !private ["PSo16NSObjectProtocol", "title"]
 - !private ["PSo16NSObjectProtocol", "view"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
@@ -589,12 +629,24 @@ depends-member:
 - !private ["CSo8NSString", "init"]
 - ["Sq", "deinit"]
 - !private ["Ps16OutputStreamType", "init"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "subscript"]
 - !private ["Ps16RawRepresentable", "Alert"]
 - !private ["Ps16RawRepresentable", "ByWordWrapping"]
 - !private ["Ps16RawRepresentable", "Cancel"]
 - !private ["Ps16RawRepresentable", "Default"]
 - !private ["Ps16RawRepresentable", "Plain"]
 - !private ["V10ObjectiveC8Selector", "deinit"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
 - !private ["Ps10Streamable", "init"]
 - !private ["SS", "init"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
@@ -614,6 +666,7 @@ depends-member:
 - !private ["CSo17UIAlertController", "addAction"]
 - !private ["CSo17UIAlertController", "addTextFieldWithConfigurationHandler"]
 - !private ["CSo17UIAlertController", "init"]
+- !private ["CSo17UIAlertController", "textFields"]
 - !private ["OSC22UIAlertControllerStyle", "Alert"]
 - !private ["PSo12UIAppearance", "addSubview"]
 - !private ["PSo12UIAppearance", "center"]
@@ -657,6 +710,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "scale"]
 - !private ["PSo21UIAppearanceContainer", "sizeToFit"]
 - !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "textFields"]
 - !private ["PSo21UIAppearanceContainer", "view"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "viewWillAppear"]
@@ -695,11 +749,13 @@ depends-member:
 - !private ["PSo18UIContentContainer", "presentViewController"]
 - !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "scale"]
+- !private ["PSo18UIContentContainer", "textFields"]
 - !private ["PSo18UIContentContainer", "view"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", "viewWillAppear"]
 - ["PSo18UIContentContainer", "width"]
 - ["PSo18UIContentContainer", ""]
+- !private ["CSo9UIControl", "text"]
 - !private ["PSo17UICoordinateSpace", "addSubview"]
 - !private ["PSo17UICoordinateSpace", "center"]
 - !private ["PSo17UICoordinateSpace", "frame"]
@@ -750,6 +806,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "scale"]
 - !private ["PSo18UIFocusEnvironment", "sizeToFit"]
 - !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "textFields"]
 - !private ["PSo18UIFocusEnvironment", "view"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", "viewWillAppear"]
@@ -760,6 +817,7 @@ depends-member:
 - !private ["CSo11UIImageView", "center"]
 - !private ["CSo11UIImageView", "frame"]
 - !private ["CSo11UIImageView", "init"]
+- !private ["PSo10UIKeyInput", "text"]
 - !private ["CSo7UILabel", "init"]
 - !private ["CSo7UILabel", "lineBreakMode"]
 - !private ["CSo7UILabel", "numberOfLines"]
@@ -810,6 +868,7 @@ depends-member:
 - ["CSo11UIResponder", "sharedApplication"]
 - !private ["CSo11UIResponder", "sizeToFit"]
 - !private ["CSo11UIResponder", "text"]
+- !private ["CSo11UIResponder", "textFields"]
 - !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "viewWillAppear"]
@@ -843,11 +902,15 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "presentViewController"]
 - !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "scale"]
+- !private ["PSo16UIStateRestoring", "textFields"]
 - !private ["PSo16UIStateRestoring", "view"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "viewWillAppear"]
 - ["PSo16UIStateRestoring", "width"]
 - ["PSo16UIStateRestoring", ""]
+- !private ["CSo11UITextField", "text"]
+- !private ["PSo11UITextInput", "text"]
+- !private ["PSo17UITextInputTraits", "text"]
 - ["PSo18UITraitEnvironment", "BoundSize_h"]
 - ["PSo18UITraitEnvironment", "BoundSize_w"]
 - !private ["PSo18UITraitEnvironment", "CGPoint"]
@@ -884,6 +947,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "scale"]
 - !private ["PSo18UITraitEnvironment", "sizeToFit"]
 - !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "textFields"]
 - !private ["PSo18UITraitEnvironment", "view"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", "viewWillAppear"]
@@ -930,6 +994,7 @@ depends-member:
 - !private ["CSo16UIViewController", "presentViewController"]
 - !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "scale"]
+- !private ["CSo16UIViewController", "textFields"]
 - !private ["CSo16UIViewController", "view"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", "viewWillAppear"]
@@ -942,15 +1007,22 @@ depends-member:
 - !private ["Vs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "subscript"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
 - !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
 - !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps24_ImageLiteralConvertible", "init"]
 - !private ["Ps24_ImageLiteralConvertible", "size"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps12_Reflectable", "Index"]
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["Ps12_Reflectable", "addSubview"]
 - !private ["Ps12_Reflectable", "center"]
@@ -961,13 +1033,18 @@ depends-member:
 - !private ["Ps12_Reflectable", "numberOfLines"]
 - !private ["Ps12_Reflectable", "size"]
 - !private ["Ps12_Reflectable", "sizeToFit"]
+- !private ["Ps12_Reflectable", "subscript"]
 - !private ["Ps12_Reflectable", "text"]
 - ["Ps12_Reflectable", "width"]
+- !private ["C11testBeacon27q_and_a", "answer"]
+- !private ["C11testBeacon27q_and_a", "doAnswer"]
 - !private ["C11testBeacon27q_and_a", "qType"]
 - !private ["C11testBeacon27q_and_a", "question"]
 depends-nominal:
 - "Ps9AnyObject"
 - !private "C11testBeacon211AppDelegate"
+- !private "Sa"
+- !private "Ps23ArrayLiteralConvertible"
 - !private "Sb"
 - !private "Ps25BooleanLiteralConvertible"
 - !private "Ps11BooleanType"
@@ -977,6 +1054,7 @@ depends-nominal:
 - !private "VSC6CGSize"
 - "Ps11CVarArgType"
 - !private "Vs9Character"
+- !private "Ps14CollectionType"
 - !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
@@ -986,13 +1064,20 @@ depends-nominal:
 - "Ps9Equatable"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "Sf"
+- !private "Ps13GeneratorType"
 - "Ps8Hashable"
+- !private "SQ"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
 - !private "Si"
 - !private "Vs5Int16"
 - !private "Vs5Int32"
 - !private "Vs5Int64"
 - !private "Vs4Int8"
 - !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
@@ -1004,8 +1089,11 @@ depends-nominal:
 - !private "CSo8NSString"
 - "Sq"
 - !private "Ps16OutputStreamType"
+- !private "Ps30RangeReplaceableCollectionType"
 - !private "Ps16RawRepresentable"
 - !private "V10ObjectiveC8Selector"
+- !private "Ps12SequenceType"
+- !private "Vs5Slice"
 - !private "Ps10Streamable"
 - !private "SS"
 - !private "Ps30StringInterpolationConvertible"
@@ -1023,16 +1111,21 @@ depends-nominal:
 - !private "OSC20UIBarButtonItemStyle"
 - !private "CSo9UIBarItem"
 - "PSo18UIContentContainer"
+- !private "CSo9UIControl"
 - !private "PSo17UICoordinateSpace"
 - !private "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
 - !private "CSo7UIImage"
 - !private "CSo11UIImageView"
+- !private "PSo10UIKeyInput"
 - !private "CSo7UILabel"
 - !private "CSo16UINavigationItem"
 - "CSo11UIResponder"
 - "CSo8UIScreen"
 - "PSo16UIStateRestoring"
+- !private "CSo11UITextField"
+- !private "PSo11UITextInput"
+- !private "PSo17UITextInputTraits"
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
@@ -1043,11 +1136,13 @@ depends-nominal:
 - !private "Vs5UInt8"
 - !private "Sc"
 - !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps10_ArrayType"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
 - !private "Ps32_BuiltinStringLiteralConvertible"
 - !private "Ps37_BuiltinUTF16StringLiteralConvertible"
 - !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
 - !private "Ps24_ImageLiteralConvertible"
 - !private "Ps21_ObjectiveCBridgeable"
 - "Ps12_Reflectable"

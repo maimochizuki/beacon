@@ -71,6 +71,9 @@ class DetailViewController: UIViewController {
         //OKボタン追加
         let ok = UIAlertAction(title: "OK", style: .Default){
             (action:UIAlertAction)in
+            if dialog.textFields![0].text! == self.ap.Item.question.answer{
+                self.ap.Item.question.doAnswer = "ok"
+            }
         }
         dialog.addAction(ok)
         //Cancelボタン追加

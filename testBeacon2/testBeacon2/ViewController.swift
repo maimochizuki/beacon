@@ -28,7 +28,7 @@
         }
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: .Default, reuseIdentifier: "mycell")
-            if items[indexPath.row].checkOK != "ok"{
+            if items[indexPath.row].printOK != "ok"{
                 cell.selectionStyle = UITableViewCellSelectionStyle.None
             }else{
                 cell.selectionStyle = UITableViewCellSelectionStyle.Blue
@@ -38,7 +38,7 @@
         }
         func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
             
-            switch items[indexPath.row].checkOK {
+            switch items[indexPath.row].printOK {
             case "ok":
                 return indexPath
             // 選択不可にしたい場合は"nil"を返す
@@ -186,10 +186,8 @@
             self.tableView.reloadData()
             for i in 0..<beacons.count{
                 for j in 0..<items.count{
-                    if beacons[i].major == items[j].beacon {
-                        if beacons[i].proximity == CLProximity.Immediate{
-                            items[j].check(items)
-                        }
+                    if beacons[i].proximity == CLProximity.Immediate{
+                        items[j].check(items,major: beacons[i].major)
                     }
                 }
             }
