@@ -21,7 +21,7 @@ class Data {
         self.preprocessing.append("end")
         self.beacon = beacon
         if question.doAnswer == "ok"{
-            printOK = "ok"
+            printOK = "o"
         }
     }
 
