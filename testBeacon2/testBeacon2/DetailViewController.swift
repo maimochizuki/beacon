@@ -16,7 +16,9 @@ class DetailViewController: UIViewController {
     var height:CGFloat = 0
     
     @IBOutlet weak var navItem: UINavigationItem!
-
+    let BoundSize_w: CGFloat = UIScreen.mainScreen().bounds.width  //横幅
+    let BoundSize_h: CGFloat = UIScreen.mainScreen().bounds.height //縦幅
+    
     override func viewWillAppear(animated: Bool) {
         
       //  print("\(ap.no)")
@@ -25,41 +27,37 @@ class DetailViewController: UIViewController {
     
     
     private func initImageView(){
-        
-        let BoundSize_w: CGFloat = UIScreen.mainScreen().bounds.width  //横幅
-        let BoundSize_h: CGFloat = UIScreen.mainScreen().bounds.height //縦幅
         print("\(BoundSize_w),\(BoundSize_h)")
         
         // UIImage インスタンスの生成
-        let image1:UIImage = UIImage(named:"Goofy.jpg")!
-        
-        
+        let image1:UIImage = UIImage(named:ap.Item.question.question)!
+    
+    
         // UIImageView 初期化
         let imageView = UIImageView(image:image1)
-        
+    
         // 画面の横幅を取得
         let screenWidth:CGFloat = view.frame.size.width
         let screenHeight:CGFloat = view.frame.size.height
+
     
-        
         width = image1.size.width
         height = image1.size.height
-        
+    
         // 画像サイズをスクリーン幅に合わせる
         scale = screenWidth / width
         let rect:CGRect = CGRect(x:0, y:0, width:width*scale, height:height*scale)
-        
+    
         // ImageView frame をCGRectで作った矩形に合わせる
         imageView.frame = rect;
-        
-        
+    
+    
         // 画像の中心を画面の中心に設定
         imageView.center = CGPoint(x:screenWidth/2, y:screenHeight/2)
-        
+    
         // UIImageViewのインスタンスをビューに追加
         self.view.addSubview(imageView)
-        
-        
+  
     }
 
     func onAdd(sender: AnyObject){
@@ -73,6 +71,9 @@ class DetailViewController: UIViewController {
         //OKボタン追加
         let ok = UIAlertAction(title: "OK", style: .Default){
             (action:UIAlertAction)in
+            if dialog.textFields![0].text! == self.ap.Item.question.answer{
+                self.ap.Item.question.doAnswer = "ok"
+            }
         }
         dialog.addAction(ok)
         //Cancelボタン追加
@@ -90,12 +91,23 @@ class DetailViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        if(ap.Item.question == "問1"){
+        if(ap.Item.question.qType == 0){
         initImageView()
-        }else{
-        var toi = UILabel(frame : CGRectMake(100, 500, 500, 20))
-        toi.text = "問１　ルフィが食べた悪魔の実は何でしょうか"
-        self.view.addSubview(toi)
+        }else if (ap.Item.question.qType == 1){
+            let toi = UILabel(frame : CGRectMake(10, 100, BoundSize_w-10, 0))
+            toi.text = ap.Item.question.question
+            toi.numberOfLines = 0
+            toi.sizeToFit()
+            toi.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            self.view.addSubview(toi)
+        }
+        else if (ap.Item.question.qType == 2){
+            let toi = UILabel(frame : CGRectMake(10, 100, BoundSize_w-10, 0))
+            toi.text = ap.Item.question.question
+            toi.numberOfLines = 0
+            toi.sizeToFit()
+            toi.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            self.view.addSubview(toi)
         }
         
         let rightBtn = UIBarButtonItem(title: "解答",style: UIBarButtonItemStyle.Plain,target: self,action: "onAdd:")
@@ -103,8 +115,8 @@ class DetailViewController: UIViewController {
         
         
       
-        navItem.title = "\(ap.Item.question)"
-        print("\(ap.Item.question)")
+        navItem.title = "\(ap.Item.title)"
+        print("\(ap.Item.title)")
     }
 
     

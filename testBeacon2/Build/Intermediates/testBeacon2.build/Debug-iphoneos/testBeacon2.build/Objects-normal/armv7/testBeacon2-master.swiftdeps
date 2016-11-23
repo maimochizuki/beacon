@@ -1,0 +1,8 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "b5c1a8d8985d04830e25017bb871bad6"
+build_time: [533194502, 633431000]
+inputs:
+  "/Users/user/Documents/\u30B7\u30B9\u30C6\u30E0\u958B\u767A\u30AF\u3099\u30EB\u30FC\u30D5\u309A/beacon/testBeacon2/testBeacon2/ViewController.swift": [533194494, 0]
+  "/Users/user/Documents/\u30B7\u30B9\u30C6\u30E0\u958B\u767A\u30AF\u3099\u30EB\u30FC\u30D5\u309A/beacon/testBeacon2/testBeacon2/Data.swift": [533194494, 0]
+  "/Users/user/Documents/\u30B7\u30B9\u30C6\u30E0\u958B\u767A\u30AF\u3099\u30EB\u30FC\u30D5\u309A/beacon/testBeacon2/testBeacon2/AppDelegate.swift": [532781416, 0]
+  "/Users/user/Documents/\u30B7\u30B9\u30C6\u30E0\u958B\u767A\u30AF\u3099\u30EB\u30FC\u30D5\u309A/beacon/testBeacon2/testBeacon2/DetailViewController.swift": [533194494, 0]

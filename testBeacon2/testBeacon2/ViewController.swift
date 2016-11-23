@@ -28,15 +28,26 @@
         }
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: .Default, reuseIdentifier: "mycell")
-            if items[indexPath.row].checkOK != "ok"{
+            if items[indexPath.row].printOK != "ok"{
                 cell.selectionStyle = UITableViewCellSelectionStyle.None
             }else{
                 cell.selectionStyle = UITableViewCellSelectionStyle.Blue
-                cell.textLabel?.text = items[indexPath.row].question
+                cell.textLabel?.text = items[indexPath.row].title
             }
             return cell
         }
-        
+        func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+            
+            switch items[indexPath.row].printOK {
+            case "ok":
+                return indexPath
+            // 選択不可にしたい場合は"nil"を返す
+
+                
+            default:
+                return nil
+            }
+        }
         
         //UUIDカラNSUUIDを作成
         let proximityUUID = NSUUID(UUIDString:"00000000-B0B8-1001-B000-001C4D28B4D2")
@@ -75,6 +86,7 @@
                 //iBeaconによる領域観測を開始する
                 print("観測開始")
                 self.manager.startRangingBeaconsInRegion(self.region)
+                break
             case .Restricted, .Denied:
                 //デバイスから拒否状態
                 print("Restricted")
@@ -150,7 +162,7 @@
          */
         func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
             
-            print(beacons)
+            //print(beacons)
             
             if(beacons.count == 0) { return }
             //複数あった場合は一番先頭のものを処理する
@@ -174,10 +186,8 @@
             self.tableView.reloadData()
             for i in 0..<beacons.count{
                 for j in 0..<items.count{
-                    if beacons[i].major == items[j].beacon {
-                        if beacons[i].proximity == CLProximity.Immediate{
-                            items[j].check(items)
-                        }
+                    if beacons[i].proximity == CLProximity.Immediate{
+                        items[j].check(items,major: beacons[i].major)
                     }
                 }
             }
@@ -199,8 +209,10 @@
         func dataSet(){
             let no1:[String] = ["no"]
             let no2:[String] = ["ようこそ"]
-            items.append(Data(question: "ようこそ",preprocessing: no1,beacon: 1111))
-            items.append(Data(question: "問1", preprocessing: no2,beacon: 2222))
+            let no3:[String] = ["ようこそ","問1"]
+            items.append(Data(title: "ようこそ", question: q_and_a(question: "Goofy.jpg", qType: 0, answer: "グーフィー"),preprocessing: no1, beacon: 1111))
+            items.append(Data(title: "問1", question: q_and_a(question: "あなたの名前を教えて下さい", qType: 1, answer: ""), preprocessing: no2, beacon: 2222))
+            items.append(Data(title: "問2", question: q_and_a(question: "1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1=?",qType: 2,answer: "2016"), preprocessing: no3, beacon: 1111))
         }
 
 }

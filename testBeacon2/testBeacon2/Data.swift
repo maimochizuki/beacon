@@ -5,40 +5,67 @@
 //  Created by ITユーザー on 2016/11/11.
 //  Copyright © 2016年 ITuser. All rights reserved.
 //
-
 import Foundation
 
 class Data {
-    var question = ""
-    var detail = ""
+    var title = ""
+    var question:q_and_a!
     var preprocessing:[String] = []
     var beacon = 0
-    var checkOK = "no"
-    var ccnt = -1
+    var printOK = "ng"
     
-    init(question:String,preprocessing:[String], beacon:Int){
+    init(title:String, question:q_and_a, preprocessing:[String], beacon:Int){
+        self.title = title
         self.question = question
         self.preprocessing = preprocessing
+        self.preprocessing.append("end")
         self.beacon = beacon
-        ccnt = self.preprocessing.count
+        if question.doAnswer == "ok"{
+            printOK = "ok"
+        }
     }
+
     
-    func check(items:[Data]){
-        for i in 0..<items.count{
-            for j in 0..<preprocessing.count{
-                if items[i].preprocessing[0] == "no"{
-                    ccnt = 0
-                    break
-                }
-                else if items[i].question == preprocessing[j]{
-                    if items[i].checkOK == "ok"{
-                        ccnt -= 1
+    func check(items:[Data], major:NSNumber){
+        print(major)
+        if question.doAnswer == "ok"{
+            for i in items{
+                if i.title != title{
+                    for p in 0..<i.preprocessing.count{
+                        if i.preprocessing[p] == title{
+                            i.preprocessing.removeAtIndex(p)
+                            if i.preprocessing[0] == "end"{
+                                i.printOK = "o"
+                            }
+                            break
+                        }
                     }
                 }
             }
         }
-        if ccnt == 0{
-            checkOK = "ok"
+        if printOK == "o"{
+            if major == beacon{
+                printOK = "ok"
+            }
+        }
+    }
+}
+
+class q_and_a {
+    var question:String!
+    var qType:Int!
+    var answer:String!
+    var doAnswer:String!
+    
+    init(question:String, qType:Int, answer:String){
+        self.question = question
+        self.qType = qType
+        self.answer = answer
+        switch qType {
+        case 0:
+            doAnswer = "ok"
+        default:
+            doAnswer = "yes"
         }
     }
 }
