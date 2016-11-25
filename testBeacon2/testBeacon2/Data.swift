@@ -12,7 +12,7 @@ class Data {
     var question:q_and_a!
     var preprocessing:[String] = []
     var beacon = 0
-    var printOK = "ng"
+    var status = "ng"
     
     init(title:String, question:q_and_a, preprocessing:[String], beacon:Int){
         self.title = title
@@ -21,7 +21,7 @@ class Data {
         self.preprocessing.append("end")
         self.beacon = beacon
         if question.doAnswer == "ok"{
-            printOK = "o"
+            status = "checked"
         }
     }
 
@@ -35,7 +35,7 @@ class Data {
                         if i.preprocessing[p] == title{
                             i.preprocessing.removeAtIndex(p)
                             if i.preprocessing[0] == "end"{
-                                i.printOK = "o"
+                                i.status = "checked"
                             }
                             break
                         }
@@ -43,9 +43,10 @@ class Data {
                 }
             }
         }
-        if printOK == "o"{
+        
+        if status == "checked"{
             if major == beacon{
-                printOK = "ok"
+                status = "printOK"
             }
         }
     }

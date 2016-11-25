@@ -17,6 +17,7 @@
 		71CB306C1DD580FE00FEFC0E /* testBeacon2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB306B1DD580FE00FEFC0E /* testBeacon2UITests.swift */; };
 		71CB307A1DD5811300FEFC0E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CB30791DD5811300FEFC0E /* CoreLocation.framework */; };
 		71CB307C1DD58F0800FEFC0E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB307B1DD58F0800FEFC0E /* Data.swift */; };
+		BE34B11E1DE6C09F00D9E783 /* launchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BE34B11D1DE6C09F00D9E783 /* launchImage.png */; };
 		CE5201301DDF225300270620 /* Goofy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE52012F1DDF225300270620 /* Goofy.jpg */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		71CB306D1DD580FE00FEFC0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71CB30791DD5811300FEFC0E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		71CB307B1DD58F0800FEFC0E /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		BE34B11D1DE6C09F00D9E783 /* launchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchImage.png; path = ../../../../launchImage.png; sourceTree = "<group>"; };
 		CE52012F1DDF225300270620 /* Goofy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Goofy.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 				71CB307B1DD58F0800FEFC0E /* Data.swift */,
 				71CB30521DD580FE00FEFC0E /* Assets.xcassets */,
 				71CB30571DD580FE00FEFC0E /* Info.plist */,
+				BE34B11D1DE6C09F00D9E783 /* launchImage.png */,
 				71CB30541DD580FE00FEFC0E /* LaunchScreen.storyboard */,
 			);
 			path = testBeacon2;
@@ -245,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE34B11E1DE6C09F00D9E783 /* launchImage.png in Resources */,
 				CE5201301DDF225300270620 /* Goofy.jpg in Resources */,
 				71CB30561DD580FE00FEFC0E /* LaunchScreen.storyboard in Resources */,
 				71CB30531DD580FE00FEFC0E /* Assets.xcassets in Resources */,

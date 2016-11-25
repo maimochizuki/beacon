@@ -28,7 +28,7 @@
         }
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: .Default, reuseIdentifier: "mycell")
-            if items[indexPath.row].printOK != "ok"{
+            if items[indexPath.row].status != "printOK"{
                 cell.selectionStyle = UITableViewCellSelectionStyle.None
             }else{
                 cell.selectionStyle = UITableViewCellSelectionStyle.Blue
@@ -38,12 +38,12 @@
         }
         func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
             
-            switch items[indexPath.row].printOK {
-            case "ok":
+            switch items[indexPath.row].status {
+            case "printOK":
                 return indexPath
-            // 選択不可にしたい場合は"nil"を返す
-
                 
+                
+            // 選択不可にしたい場合は"nil"を返す
             default:
                 return nil
             }
@@ -207,7 +207,7 @@
         }
         
         func dataSet(){
-            let no1:[String] = ["no"]
+            let no1:[String] = [""]
             let no2:[String] = ["ようこそ"]
             let no3:[String] = ["ようこそ","問1"]
             items.append(Data(title: "ようこそ", question: q_and_a(question: "Goofy.jpg", qType: 0, answer: "グーフィー"),preprocessing: no1, beacon: 1111))

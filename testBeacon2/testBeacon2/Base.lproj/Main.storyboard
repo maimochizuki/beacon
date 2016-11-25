@@ -15,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nuB-h9-p00">
-                                <rect key="frame" x="25" y="10" width="374" height="716"/>
+                                <rect key="frame" x="25" y="10" width="288" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="uby-8M-fx3"/>
@@ -36,7 +36,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nuZ-37-rYq"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tableView" destination="nuB-h9-p00" id="GRK-Oj-mbI"/>
                         <segue destination="qJk-p7-OfD" kind="push" identifier="toDetail" id="0h5-lT-TAW"/>
@@ -55,12 +55,12 @@
                         <viewControllerLayoutGuide type="bottom" id="2DM-pQ-1Ru"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wx0-4x-ozF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="fhz-y1-g4w"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="navItem" destination="fhz-y1-g4w" id="isa-Oh-kJr"/>
                     </connections>
@@ -74,7 +74,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MbW-FQ-XXV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zrd-Mg-IyZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
